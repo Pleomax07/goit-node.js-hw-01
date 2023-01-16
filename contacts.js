@@ -3,7 +3,7 @@ const path = require("path");
 const colors = require("colors");
 const { v4: uuidv4 } = require("uuid");
 
-const contactsPath = path.join("db/contacts.json");
+const contactsPath = path.join(__dirname, "db", "contacts.json");
 const log = console.log;
 
 const getContacts = async () => {
