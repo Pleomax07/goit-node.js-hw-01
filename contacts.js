@@ -5,10 +5,9 @@ const { v4: uuidv4 } = require("uuid");
 
 const contactsPath = path.join(__dirname, "db", "contacts.json");
 const log = console.log;
-
 const getContacts = async () => {
   try {
-    const content = await fs.readFile(contactsPath);
+    const content = await fs.readFile(contactsPath, 'utf-8');
     const contacts = JSON.parse(content);
 
     return contacts;
